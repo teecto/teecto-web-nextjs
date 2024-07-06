@@ -1,0 +1,306 @@
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	max-width: 1200px;
+}
+
+@media (min-width: 280px) and (max-width: 991.98px) { 
+	.sm-d-none{
+		display: none;
+	}
+	.hamburger{
+		display: flex;
+	}
+	.app-header .app-header-wrapper {
+		width: 100%;
+		margin: 20px auto;
+		height: 60px;
+		padding: 0 15px;
+	}
+	.hero .hero-wrapper{
+		height: auto;
+		max-height:none;
+		padding-bottom: 100px;
+		padding-top: 160px;
+	}
+	.hero-social-list{
+		display: none;
+	}
+	.hero .hero-wrapper h1 {
+		font-size: 50px;
+		line-height: 60px;
+		text-align: center;
+	}
+	.hero .hero-wrapper h2{
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	.hero .hero-wrapper p{
+		text-align: center;
+	}
+	.skills-list .skill-card {
+		width: 55px;
+		height: 55px;
+	}
+	.skills-list .skill-card .card-icon{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.skills-list .skill-card .card-icon img{
+      max-width: 70%;
+      max-height: 70%;
+	  object-fit: contain;
+    }
+	.member-intro .intro-content h1 {
+		font-size: 38px;
+		line-height: 50px;
+	}
+	.member-intro .intro-content h2 {
+		font-size: 22px;
+		line-height: 35px;
+		margin-top: 15px;
+	}
+	.member-intro .intro-content {
+		min-height: 60vh;
+	}
+	.member-intro .intro-one .review-wrapper .review-card {
+		padding: 20px 25px;
+		border-radius: 13px;
+		display: flex;
+		flex-direction: column;
+	}
+	.member-intro .intro-one .review-wrapper .review-card .card-content h2 {
+		margin: 10px 0 5px 0;
+	}
+	.member-intro .intro-one .review-wrapper .review-card i .MuiSvgIcon-root {
+		display: none;
+	}
+	.about-img{
+		display: none;
+	}
+	.service-header h3 {
+		font-size: 22px;
+	}
+	.service-header h2 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.service {
+		padding: 50px 15px 0 15px;
+	}
+	.service-wrappeer .service-wrap {
+		height: auto;
+	}
+	.service-wrappeer::after {
+		display: none;
+	}
+	.service-wrappeer .service-wrap {
+		border-right: transparent;
+	}
+	
+	.tab-list-wrapper .tab-list .MuiTabs-flexContainer {
+		flex-wrap: wrap;
+	}
+	.tab-list-wrapper .tab-list .MuiTabs-flexContainer .MuiTab-root {
+		margin-bottom: 10px;
+	}
+	.tab-list-wrapper .tab-list  .MuiTabs-indicator {
+		background-color: transparent ;
+	}
+	.showcase-wrapper {
+		margin-top: 15px;
+	}
+	.team-heading h2 {
+		font-size: 40px;
+		line-height: 52px;
+	}
+	.team-heading h3 {
+		font-size: 26px;
+		line-height: 38px;
+	}
+	.team .swiper {
+		height: auto !important;
+		width: 100% !important;                    
+	}
+	  .team-wrapper .team-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px 20px 20px 20px;
+	}
+	.team-wrapper .team-card .team-profile{
+       height: 260px;
+	   width: 220px;
+	}
+	.team-wrapper .team-card .team-content{
+		padding-left: 0px;
+		padding-top: 15px;
+	}
+	.team-wrapper .team-card .team-content h2{
+		font-size: 22px;
+	}
+	.process .process-header h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.process .process-header h2 span {
+		font-size: 40px;
+	}
+	.project-showcase .showcase-header h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.project-showcase .showcase-header h2 span{
+		font-size: 40px;
+	}
+	.member-intro .intro-one{
+		padding: 120px 0 70px 0;
+	}
+	.contact-wrapper{
+		padding-top: 150px;
+	}
+	.market-info{
+		margin-top: 50px;
+	}
+	.market-info img{
+		max-width: 100px;
+		max-height: 100px;
+	}
+	.market-info p{
+		font-size: 15px;
+	}
+	.team-wrapper .team-card .team-content p {
+		display: none;
+	}
+	.process{
+		display: none;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.hero .hero-wrapper h1 {
+		font-size: 66px;
+		line-height: 76px;
+	}
+	.member-intro .intro-content h1 {
+		font-size: 48px;
+		line-height: 60px;
+	}
+	.member-intro .intro-content h2 {
+		font-size: 24px;
+		line-height: 35px;
+	}
+	.service-wrappeer .service-wrap {
+		height: 380px;
+	}
+	.process{
+		display: block;
+	}
+	.process-wrapper .qreate-process-item {
+		width: 270px;
+		height: 270px;
+		padding: 0 20px 0 40px;
+	}
+	.process-wrapper .qreate-process-item .qreate-number {
+		font-size: 100px;
+		line-height: 120px;
+	}
+	.process-wrapper .qreate-process-item p {
+		display: none;
+	}
+	.process-wrapper .qreate-process-item:nth-child(2) {
+		width: 300px;
+		height: 300px;
+		margin-left: -60px;
+		padding: 0 20px 0 50px;
+	}
+	.process-wrapper .qreate-process-item:nth-child(1) {
+		margin-left: 40px;
+	}
+	.process-wrapper .qreate-process-item:nth-child(3) {
+		width: 380px;
+		height: 380px;
+		margin: -88px auto 0;
+		padding: 0 40px 0 80px;
+	}
+	.showcase-item .showcase-img{
+		height: 170px;
+	}
+	.team-wrapper .team-card .team-content p {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.hero .hero-wrapper h1 {
+		font-size: 66px;
+		line-height: 76px;
+	}
+	.member-intro .intro-content h1 {
+		font-size: 48px;
+		line-height: 60px;
+	}
+	.member-intro .intro-content h2 {
+		font-size: 24px;
+		line-height: 35px;
+	}
+	.service-wrappeer .service-wrap {
+		height: 380px;
+	}
+	.process{
+		display: block;
+	}
+	.process-wrapper .qreate-process-item {
+		width: 360px;
+		height: 360px;
+		padding: 0 20px 0 50px;
+	}
+	.process-wrapper .qreate-process-item .qreate-number {
+		font-size: 100px;
+		line-height: 120px;
+	}
+	
+	.process-wrapper .qreate-process-item:nth-child(2) {
+		width: 400px;
+		height: 400px;
+		margin-left: -60px;
+		padding: 0 20px 0 60px;
+	}
+	.process-wrapper .qreate-process-item:nth-child(1) {
+		margin-left: 40px;
+	}
+	.process-wrapper .qreate-process-item:nth-child(3) {
+		width: 500px;
+		height: 500px;
+		margin: -88px auto 0;
+		padding: 0 40px 0 80px;
+	}
+	.showcase-item .showcase-img{
+		height: 170px;
+	}
+	.team-wrapper .team-card .team-content p {
+		display: block;
+	}
+	.team-wrapper .team-card {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 40px 40px;
+	}
+	.team-wrapper .team-card .team-profile{
+		height: 340px;
+		width: 240px;
+	 }
+	 .team-wrapper .team-card .team-content{
+		padding-left: 20px;
+		padding-top: 0px;
+	}
+}
+
+
+@media (min-width: 992px) and (max-width: 1500.98px){
+	.hamburger{
+		display: none;
+	}
+}

@@ -1,0 +1,382 @@
+.project-showcase {
+  width: 100%;
+  background-image: url(../../../public/images/showcaseBg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 60px;
+  padding-top: 50px;
+  .showcase-header {
+    position: relative;
+    h2 {
+      color: #33b3ae;
+      font-family: $secondaryFont;
+      font-weight: 600; 
+      font-size: 45px;
+      line-height: 55px;
+      font-feature-settings: unset;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+
+      span {
+        font-size: 80px;
+        color: $whiteColor;
+      }
+    }
+    p {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .bg_light {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.showcase-wrapper {
+  margin-top: 50px;
+}
+.tab-list-wrapper {                             
+  margin-top: 50px;
+  .tab-list {          
+    .MuiTabs-flexContainer {     
+      display: flex;
+      justify-content: center;
+                                             
+      .MuiTab-root {
+        color: #bdbdbd;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .Mui-selected {
+        color: $blackColor;
+        background-color: #ffffff;
+        font-weight: 500;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+    }
+    .MuiTabs-indicator {
+      background-color: #33b3ae;
+    }
+  }
+}
+.showcase-item {
+  padding: 30px 20px 20px 20px;
+  background-color: #000;                       
+  border-radius: 20px;
+  box-shadow: rgba(112, 122, 132, 0.134) 0px 8px 24px;
+  position: relative;
+  top: 0;
+  &:hover .showcase-img .overly {
+    opacity: 1;
+  }
+  &:hover .showcase-img .overly button {
+    top: -20px;
+    transition: 0.25s ease-in-out;
+  }
+  .showcase-img {
+    height: 230px;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    img {
+      object-fit: cover;
+    }
+    .overly {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      button {
+        font-size: 13px;
+        padding: 10px 20px;
+        background-image: linear-gradient(
+          271.72deg,
+          #31ad98 7.09%,
+          #418ce2 96.61%
+        );
+        border-radius: 6px;
+        color: $whiteColor;
+        position: relative;
+        top: 0;
+        margin: 0 8px;
+        
+        &:hover {
+          background-image: linear-gradient(
+            271.72deg,
+            #418ce2 7.09%,
+            #31ad98 96.61%
+          );
+        }
+      }
+    }
+  }
+  .showcase-content {
+    padding-top: 10px;
+    h5 {
+      font-size: 15px;
+      color: $whiteColor;
+      line-height: 20px;
+      font-weight: 500;
+    }
+    h6 {
+      font-size: 13px;
+      color: #b4b6b8;
+      line-height: 20px;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    .showcase-intense {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      .intense-img {
+        margin-right: 8px;
+        background-color: rgba(117, 128, 152, 0.393);
+        height: 32px;
+        width: 32px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        img {
+          max-height: 25px;
+          width: 25px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .dot-item {
+    display: flex;
+    position: absolute;
+    top: 13px;
+    left: 22px;
+    li {
+      height: 7px;
+      width: 7px;
+      background-color: #c8cdcf5f;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 180px;
+    background: -o-linear-gradient(
+      top,
+      transparent 30%,
+      #00bad4 65%,
+      transparent 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(30%, transparent),
+      color-stop(65%, #00bad4),
+      to(transparent)
+    );
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      #00bad4 65%,
+      transparent 100%
+    );
+    top: 60%;
+    left: -1px;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out, top 0.25s ease-in-out;
+    will-change: opacity, top;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 180px;
+    background: -o-linear-gradient(
+      top,
+      transparent 30%,
+      #00bad4 65%,
+      transparent 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(30%, transparent),
+      color-stop(65%, #00bad4),
+      to(transparent)
+    );
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      #00bad4 65%,
+      transparent 100%
+    );
+    bottom: 60%;
+    right: -1px;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out, bottom 0.25s ease-in-out;
+    will-change: opacity, bottom;
+  }
+  &:hover::before {
+    top: 15%;
+    opacity: 1;
+  }
+  &:hover::after {
+    bottom: 15%;
+    opacity: 1;
+  }
+  &:hover {
+    top: -12px;
+    transition: 0.25s ease-in-out;
+  }
+}
+
+// Dialog Content
+
+.dialog-wrapper {
+  .MuiPaper-root {
+    // padding: 56px 80px;
+    border-radius: 24px;
+    background: rgba(117, 118, 118, 0.64);
+    box-shadow: 0px 16px 64px 0px rgba(47, 46, 46, 0.56);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    -webkit-transition: 1s linear;
+    -o-transition: 1s linear;
+    transition: 1s linear;
+  }
+}
+.dialog-view-conetnt {
+  width: 100%;
+  padding: 20px;
+
+  .swiper-wrapper {
+    position: relative;
+  }
+  .swiper-button-next::after {
+    color: $textColor;
+    font-size: 14px;
+  }
+  .swiper-button-next {
+    // top: 50%;
+    // transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $whiteColor;
+    @include d-center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    &:hover {
+      background-color: $primaryColor;
+    }
+  }
+  .swiper-button-prev {
+    // top: 50%;
+    // transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $whiteColor;
+    @include d-center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    &:hover {
+      background-color: $primaryColor;
+    }
+  }
+  .swiper-button-next:hover::after {
+    color: $whiteColor;
+  }
+  .swiper-button-prev:hover::after {
+    color: $whiteColor;
+  }
+  .swiper-button-prev::after {
+    color: $textColor;
+    font-size: 14px;
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: $primaryColor;
+    }
+  }
+
+  .project-images {
+    min-height: 480px;
+    max-height: 480px;
+    background-color: #eae7e7c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .project-detail{
+    padding-left: 20px;
+    h3{
+        font-size: 32px;
+        color: $whiteColor;
+        font-weight: 500;
+        line-height: 42px;
+    }
+   .sub-title{
+     padding: 5px 20px;
+     background-color: $primaryColor;
+     border-radius: 35px;
+     font-size: 14px;
+     display: inline-block;
+     color: $whiteColor;
+     margin-top: 10px;
+   }
+   p{
+    font-size: 15px;
+    color: #eeeded;
+    margin: 20px 0;
+   }
+   h4{
+    font-size: 15px;
+    color: $whiteColor;
+    font-weight: 500;
+    line-height: 23px;
+    text-transform: uppercase;
+   }
+   ul{
+    margin-top: 10px;
+    margin-left: 20px;
+    li{
+        list-style:disc;
+        color: #f0eeee;
+        font-size: 15px;
+        margin-top: 6px;
+    }
+   }
+  }
+}

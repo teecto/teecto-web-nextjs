@@ -1,0 +1,97 @@
+.process{
+    padding-top: 150px;
+    margin-bottom: 150px;
+    .process-header{
+        position: relative; 
+        h2{
+            color: #33b3ae;
+            font-family: $secondaryFont;
+            font-weight: 600;
+            font-size: 45px;
+            line-height: 55px;
+            font-feature-settings: unset;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            
+            span{
+                font-size: 80px;                                                    
+                color: $whiteColor;
+            }
+        }
+        p{
+            text-align: center;
+            margin-top: 20px;
+        }
+         .bg_light{
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+         }
+    }
+}
+
+.process-wrapper{
+    position: relative;
+    margin-top: 80px;
+    .qreate-process-item {
+        width: 500px;
+        height: 500px;
+        // margin-left: 50px;
+        position: relative;
+        z-index: 1;
+        background-color: #33b3ae;
+        border-radius: 50%;
+        display: inline-flex; 
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        padding: 0 100px 0 100px;
+
+        .qreate-number{
+            font-size: 200px;
+            line-height: 180px;
+            font-weight: bold;
+            font-family: $thirdFont;
+            letter-spacing: 0px;
+        }
+        .qreate-title{
+            font-size: 28px;
+            line-height: 38px;
+            font-weight: 700;
+            font-family: $thirdFont;
+        }
+        p{
+            font-size: 16px;
+            color: #101010;
+            margin-top: 12px;
+        }
+        &:nth-child(1){
+            margin-left: 60px;
+        }
+
+        &:nth-child(2){
+            width: 570px;
+            height: 570px;
+            display: inline-flex;
+            margin-left: -60px;
+            position: relative;
+            z-index: 2;
+            background-color: #f778ba;
+           padding: 0 120px 0 120px;
+
+        }                            
+        &:nth-child(3){
+            width: 600px;
+            height: 600px;
+            display: flex;
+            margin: -138px auto 0;
+            position: relative;
+            padding: 0 150px 0 150px;
+            z-index: 1;
+            background-color: #fff;
+        }
+    }  
+}

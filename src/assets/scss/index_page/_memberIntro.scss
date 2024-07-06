@@ -1,0 +1,165 @@
+.member-intro {
+  .intro-content {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+
+    h1 {
+      font-size: 120px;
+      font-weight: 900;
+      line-height: 145px;
+      color: #000;
+      font-family: $thirdFont;
+    }
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 42px;
+      letter-spacing: 1.8px;
+      color: #000;
+      margin-top: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+  .intro-one {
+    min-height: 100vh;
+    width: 100%;
+    background-image: conic-gradient(
+      from 90deg at -10% 100%,
+      #2b303b 0deg,
+      #2b303b 90deg,
+      #16181d 1turn
+    );
+    padding: 120px 0;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    .review-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+     
+    }
+  }
+}
+
+.review-card {
+  padding: 20px 25px;
+  background-color: rgba(117, 128, 152, 0.283);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 10px 40px hsla(0, 0%, 0%, 0.204);
+  position: relative;
+  transition: 0.25s ease-in-out;
+  top: 0;
+  cursor: pointer;
+  &:hover{
+      top: -15px;
+      transition: 0.25s ease-in-out;
+   }
+  .card-icon {
+    height: 60px;
+    width: 60px;
+    background: #64acff;
+    border-radius: 50%;
+    @include d-center;
+    img{
+      max-height: 38px;
+      max-width: 38px;
+      object-fit: contain;
+    }
+  }
+  .card-content{
+      text-align: center;
+      h2{
+          font-size: 48px;
+          color: #fff;
+          background: linear-gradient(271.72deg, #a2facf 7.09%, #64acff 96.61%);
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          font-weight: 600;
+          line-height: 60px;
+          font-family: $secondaryFont;
+      }
+      h4{
+          font-size: 13px;
+          color: #fff;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 1.2px;
+      }
+  }
+  i{
+      .MuiSvgIcon-root{
+          color: #fff;
+          font-size: 18px;
+      }
+  }
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+  img {
+    max-height: 450px;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+.about-content{
+    position: relative;
+    padding-left: 40px;
+    .section-subtitle {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        transform: rotate(0.75turn) translateX(-100%);
+        transform-origin: left top;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        color: #fff;
+        background: linear-gradient(271.72deg, #a2facf 7.09%, #64acff 96.61%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-weight: 500;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: auto;
+            right: calc(100% + 20px);
+            width: 60px;
+            height: 2px;
+            background: hsl(0, 0%, 62%);
+            
+        }
+    }
+    h2{
+        font-size: 34px;
+        line-height: 46px;
+        font-weight: 700;
+        color: #fff;
+        font-family: $secondaryFont;
+    }
+    p{
+        margin: 20px 0;
+        
+    }
+}
+
+.about-section{
+  margin-top: 100px;
+}
+

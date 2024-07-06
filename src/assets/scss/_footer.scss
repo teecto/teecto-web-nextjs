@@ -1,0 +1,33 @@
+.footer {
+  background-image: conic-gradient(
+    from 90deg at -10% 100%,
+    #1d1e22 0deg,
+    #1e2128 90deg,
+    #141517 1turn
+  );
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 20px 0;
+  .footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+
+    .logo {
+      img { 
+        max-height: 25px;
+        object-fit: contain;
+      } 
+    }
+    span {
+      color: #d0cece;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: end;
+      span {
+        font-weight: 500;
+        color: #fff;
+        font-size: 15px;
+      }
+    }
+  }
+}

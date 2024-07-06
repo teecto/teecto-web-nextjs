@@ -1,0 +1,189 @@
+.app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+
+  .app-header-wrapper{
+    width: 900px;
+    margin: 20px auto;
+    height: 60px;
+    background-color:  rgba(138, 152, 183, 0.387);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    .logo{
+      img{
+        max-height: 37px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+    .nav-list{
+      ul{
+        display: flex;
+        align-items: center;
+        li{
+          margin-left: 25px;
+          position: relative;
+          &:hover .dropdown-plate{
+            opacity: 1;
+            visibility: visible;
+            transition: all .3s ease-in-out;
+          }
+          a{
+            font-size: 14px;
+            color: #dddfe0;
+            font-weight: 400;
+            display: flex;
+            letter-spacing: 1.08px;
+            align-items: center;
+            text-transform: uppercase;
+            &:hover{
+              color: $whiteColor;
+            }
+            .MuiSvgIcon-root{
+              font-size: 16px;
+              margin-right: 3px;
+            }
+          }
+          .dropdown-plate{
+            position: absolute;
+            left: 0;
+            top: 25px;
+            // background-color: rgba(118, 125, 142, 0.935);
+            background-color: #e1eaf5;
+            z-index: 2;
+            min-width: 240px;
+            border-radius: 12px;
+            overflow: hidden;
+            opacity: 0; 
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+            ul{
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              justify-content: start;
+              li{
+                margin-left: 0px;
+                padding: 15px 15px;
+                border-bottom: 1px solid #9eb1d4b6;
+                width: 100%;
+                &:hover{
+                  background-color: rgba(207, 216, 234, 0.93);
+                }
+                &:last-child{
+                  border-bottom: 1px solid transparent;
+                }
+                a{
+                  text-align: start;
+                  color: #000;
+                }
+              }
+            }
+          }
+        }
+        .conatct-btn{
+          padding: 10px 14px;
+          background-color: $primaryColor; 
+          color: $whiteColor;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: 400;
+          margin-left: 25px;
+          &:hover{
+            background-color: $secondaryColor;
+          }
+          .MuiSvgIcon-root{
+            font-size: 16px;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+.hamburger{
+  height: 38px;
+  width: 38px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border-radius: 5px;
+  display: none;
+  .MuiSvgIcon-root{
+    color: $whiteColor;
+    font-size: 30px;
+  }
+}
+
+.drawe-content{
+  width: 280px;
+  height: 100%;
+  padding: 20px;
+  background-image: conic-gradient(
+    from 90deg at -10% 100%,
+    #2b303b 0deg,
+    #2b303b 90deg,
+    #16181d 1turn
+  );
+  .drawer-logo{
+    padding: 20px 0;
+    img{
+      max-width: 140px;
+    }
+  }
+  .nav-list{
+    margin-top: 40px;
+    ul{
+      li{
+        margin-top: 25px;
+        a{
+          font-size: 14px;
+          color: #dddfe0;
+          font-weight: 400;
+          display: flex;
+          letter-spacing: 1.08px;
+          align-items: center;
+          text-transform: uppercase;
+          &:hover{
+            color: $whiteColor;
+          }
+          .MuiSvgIcon-root{
+            font-size: 16px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .conatct-btn{
+        padding: 10px 14px;
+        background-color: $primaryColor;
+        color: $whiteColor;
+        border-radius: 35px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 25px;
+        &:hover{
+          background-color: $secondaryColor;
+        }
+        .MuiSvgIcon-root{
+          font-size: 16px;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}
+
+

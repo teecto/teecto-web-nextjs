@@ -1,0 +1,135 @@
+.contact-wrapper{
+padding-top: 150px;
+.contact-content{
+    position: relative;
+    padding-left: 40px;
+    .section-subtitle {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        transform: rotate(0.75turn) translateX(-100%);
+        transform-origin: left top;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        color: #fff;
+        background: linear-gradient(271.72deg, #a2facf 7.09%, #64acff 96.61%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-weight: 500;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: auto; 
+            right: calc(100% + 20px);
+            width: 60px;
+            height: 2px;
+            background: hsl(0, 0%, 62%);
+            
+        }
+    }
+    h2{
+        font-size: 34px;
+        line-height: 46px;
+        font-weight: 700;
+        color: #fff;
+        font-family: $secondaryFont;
+    }
+    p{
+        margin: 20px 0;
+        
+    }
+}
+}
+
+.contact-info{
+    .info-item{
+        display: flex;
+        margin-top: 20px;
+        i{
+            height: 35px;
+            width: 35px;
+            border: 1px solid #cbcdcf;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .MuiSvgIcon-root{
+                font-size: 20px;
+                color: #cbcdcf;
+            }
+        }
+        .info-contant{
+            padding-left: 15px;
+            h4{
+                font-size: 15px;
+                color: #fff;
+                line-height: 22px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+            p{
+                margin: 0px 0;
+                font-size: 14px;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                li{
+                    a{
+                        height: 35px;
+                        width: 35px;
+                        background-color: #edeeee;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        .MuiSvgIcon-root{
+                            font-size: 22px;
+                            color: #0b0b0b;
+                            &:hover{
+                              color: $primaryColor;
+                            }
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.market-info{
+    text-align: center;
+    img{
+        max-height: 150px;
+        object-fit: contain;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+    h3{
+        color: #fff;
+        margin: 20px 0 10px 0;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 1.1px;
+        font-family: $thirdFont;
+    }
+    .market-button{ 
+        padding: 10px 14px;
+        background-color: $primaryColor;
+        color: $whiteColor;
+        border-radius: 35px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 12px auto;
+        &:hover{
+          background-color: $secondaryColor;
+        }
+    }
+}
