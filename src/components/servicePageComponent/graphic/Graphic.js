@@ -14,9 +14,7 @@ const uiToolList = [
 function Graphic() {
   return (
     <>
-      <div className="background-shape">
-        <img src="images/background-shape-svg.png" alt="" />
-      </div>
+      
       <div className="service-page-content">
         <h2>Graphic Design</h2>
         <p>
