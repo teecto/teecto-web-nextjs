@@ -11,19 +11,22 @@ export default function uiUx() {
   return (
     <>
       <div className="subPage-body">
+        <div className="background-shape">
+          <img src="images/background-shape-svg.png" alt="" />
+        </div>
         <Container>
           <AppHeader />
-          <UiUx/>
+          <UiUx />
         </Container>
 
         <div className="service-showcase">
           <Container>
-            <UiUxShowcase/>
+            <UiUxShowcase />
           </Container>
         </div>
         <Contact />
       </div>
-      
+
       <Footer />
     </>
   );
