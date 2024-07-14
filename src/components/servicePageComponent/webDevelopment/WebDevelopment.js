@@ -41,9 +41,6 @@ const backendIconList = [
 function WebDevelopment() {
   return (
     <>
-      <div className="background-shape">
-        <img src="images/background-shape-svg.png" alt="" />
-      </div>
       <div className="service-page-content">
         <h2>Web Development</h2>
         <p>

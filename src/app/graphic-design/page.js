@@ -13,19 +13,22 @@ export default function graphicDesign() {
   return (
     <>
       <div className="subPage-body">
+        <div className="background-shape">
+          <img src="images/background-shape-svg.png" alt="" />
+        </div>
         <Container>
           <AppHeader />
-          <Graphic/>
+          <Graphic />
         </Container>
 
         <div className="service-showcase">
           <Container>
-            <GraphicShowcase/>
+            <GraphicShowcase />
           </Container>
         </div>
         <Contact />
       </div>
-      
+
       <Footer />
     </>
   );

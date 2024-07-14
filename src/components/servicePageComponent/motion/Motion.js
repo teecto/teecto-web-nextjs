@@ -16,9 +16,7 @@ const uiToolList = [
 function Motion() {
   return (
     <>
-      <div className="background-shape">
-        <img src="images/background-shape-svg.png" alt="" />
-      </div>
+      
       <div className="service-page-content">
         <h2>Motion Graphic Design</h2>
         <p>

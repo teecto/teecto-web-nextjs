@@ -10,7 +10,7 @@ import about from "../../public/images/about.png";
 import Review from "./review/Review";
 
 
-function MemberIntro() {
+function MemberIntro({categories}) {
   return (
     <>
       <div className="member-intro">
@@ -65,8 +65,8 @@ function MemberIntro() {
           </Container>
           <Service />
           <Process />
-          <ProjectShowcase />
-          {/* <Team /> */}
+          <ProjectShowcase categories={categories} />
+          <Team />
           <Contact />
         </div>
       </div>

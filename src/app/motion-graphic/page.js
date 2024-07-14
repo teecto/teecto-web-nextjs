@@ -13,6 +13,9 @@ export default function motionGraphic() {
   return (
     <>
       <div className="subPage-body">
+      <div className="background-shape">
+        <img src="images/background-shape-svg.png" alt="" />
+      </div>
         <Container>
           <AppHeader />
           <Motion/>
