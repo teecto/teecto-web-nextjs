@@ -97,10 +97,13 @@
       }
       p{
         color: #4b4848;
-      }
+        padding-bottom: 10px;
+      } 
       .box-img{
         display: flex;
         justify-content: flex-end;
+        overflow: hidden;
+        border-radius: 10px;
         // position: absolute;
         // bottom: -10px;
         // right: -10px;
@@ -108,7 +111,7 @@
           width: 100%;
           max-height: 230px;
           object-fit: contain;
-        }
+        } 
       }
       .box-img-2{
         border-radius: 12px;
@@ -116,7 +119,8 @@
         img{
           width: 100%;
           max-height: 300px; 
-          object-fit: cover;
+          object-fit: contain;
+          border-radius: 12px;
         }
       }
     }
