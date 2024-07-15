@@ -14,19 +14,49 @@ async function getAllCategoriesData() {
         _id,
         title,
         slug,
-        additionalImages,
-        "categories":*[_type == "category" && references(^._id)] | order(publishedAt desc){
-          title,
-          description
+        type,
+        "additionalImages": additionalImages[] {
+          asset -> {
+            _id,
+            url,
+            alt,
+            caption,
+            metadata {
+              dimensions {
+                width,
+                height
+              }
+            }
+          }
         },
-        "technologies": *[_type == "technology" && references(^._id)] | order(publishedAt desc) {
-          name,
-          image
-        },
+        categories,
+        technologies,
         link,
         tags,
         body,
         publishedAt
+      }
+    }| order(publishedAt desc)
+  `;
+  const res = await sanityClient.fetch(query,{ next: { revalidate: 3600 }})
+  return res
+}
+async function getAllTechnologyData() {
+  const query = `
+    *[_type == "technology"] {
+      _id,
+      name,
+      "image": image.asset -> {
+        _id,
+        url,
+        alt,
+        caption,
+        metadata {
+          dimensions {
+            width,
+            height
+          }
+        }
       }
     }
   `;
@@ -37,11 +67,12 @@ async function getAllCategoriesData() {
 
 export default async function Home() {
   const categories = await getAllCategoriesData()
+  const technologies = await getAllTechnologyData()
     return (
       <>
         <AppHeader/>
         <Hero/>
-        <MemberIntro categories={categories}/>
+        <MemberIntro categories={categories} technologies={technologies}/>
         <Footer/>
       </>
     );
