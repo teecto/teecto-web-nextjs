@@ -5,10 +5,24 @@ import figma from "../../../public/images/figma.png";
 import react from "../../../public/images/react-js.png";
 import redux from "../../../public/images/redux.png";
 import showcase from "../../../public/images/showcase-2.jpeg";
+import Link from "next/link";
 
+function ProjectCard({ post, technologies }) {
+  var storeTechnology = []
+  if(technologies && technologies.length>0){
+    technologies.forEach(technology => {
+      if(post?.technologies && post.technologies.length>0){
+          post.technologies.forEach(element => {
+          if(element?._ref === technology?._id){
+            storeTechnology.push(technology)
+          }
+        });
+      }
+    });
+  }
 
+  console.log('technology', storeTechnology)
 
-function ProjectCard() {
   return (
     <>
       <div className="showcase-item">
@@ -18,32 +32,39 @@ function ProjectCard() {
           <li></li>
         </ul>
         <div className="showcase-img">
-          <Image src={showcase} alt="showcase"></Image>
+          {post?.additionalImages && post?.additionalImages.length > 0 && (
+            <Image
+              src={post?.additionalImages[0]?.asset?.url}
+              alt={post?.title}
+              width={0}
+              height={0}
+              sizes="100vw"
+            ></Image>
+          )}
           <div className="overly">
-            <button>Details</button>
-            <button>View Demo</button>
+          <Link href={`/details/${post.slug.current}`}><button>Details</button></Link>
+             <a href={post?.link} target="_blank"><button>View Demo</button></a>
           </div>
         </div>
         <div className="showcase-content">
-          <h5>Start Hub Project</h5>
-          <h6>Landing Page</h6>
-
+          {post?.title && <h5>{post?.title}</h5>}
+          {post?.type && <h6>{post?.type}</h6>}
           <div className="showcase-intense">
-            <Tooltip title="Figma" placement="top">
-              <div className="intense-img">
-                <Image src={figma} alt="Figma"></Image>
-              </div>
-            </Tooltip>
-            <Tooltip title="React Js" placement="top">
-              <div className="intense-img">
-                <Image src={react} alt="React Js"></Image>
-              </div>
-            </Tooltip>
-            <Tooltip title="Redux" placement="top">
-              <div className="intense-img">
-                <Image src={redux} alt="Redux"></Image>
-              </div>
-            </Tooltip>
+            {storeTechnology && storeTechnology.length>0 && storeTechnology.map((technology, key)=>{
+              return(
+                <Tooltip key={technology?._id} title={technology?.name} placement="top">
+                    <div className="intense-img">
+                      <Image
+                        src={technology?.image?.url}
+                        alt={technology?.name}
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                      ></Image>                    
+                      </div>
+                  </Tooltip>
+              )
+            })}
           </div>
         </div>
       </div>
