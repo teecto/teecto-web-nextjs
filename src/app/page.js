@@ -1,8 +1,8 @@
-import AppHeader from "@/components/AppHeader";
-import Footer from "@/components/Footer";
 import Hero from "@/components/hero/Hero";
 import MemberIntro from "@/components/MemberIntro";
 import sanityClient from "../client";
+
+
 
 async function getAllCategoriesData() {
   const query = `
@@ -70,10 +70,8 @@ export default async function Home() {
   const technologies = await getAllTechnologyData()
     return (
       <>
-        <AppHeader/>
         <Hero/>
         <MemberIntro categories={categories} technologies={technologies}/>
-        <Footer/>
       </>
     );
   }
