@@ -1,18 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import { Box, Button, Container, Grid, Tooltip } from "@mui/material";
-import Image from "next/image";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ProjectCard from "./projectCard/ProjectCard";
+import Link from "next/link";
 
 function ProjectShowcase({categories,technologies}) {
   // Tabs
@@ -20,9 +18,6 @@ function ProjectShowcase({categories,technologies}) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  console.log('categories', categories)
-  console.log('technologies', technologies)
 
   return (
     <>
@@ -105,21 +100,41 @@ function ProjectShowcase({categories,technologies}) {
                     <Grid container spacing={3}>
                       {category?.posts && category.posts.length>0 
                       ?
-                      <>
-                      {category?.posts.map((post, key)=>{
-                        return(
-                          <Grid key={post?._id} item lg={4} md={4} sm={6} xs={12}>
-                            <ProjectCard post={post} technologies={technologies} />
-                          </Grid>
-                        )
-                      })}
-                      </>
+                          <>
+                            {category?.posts.length>6 
+                              ?
+                              <>
+                              {category?.posts.slice(0,6).map((post, key)=>{
+                                return(
+                                  <Grid key={post?._id} item lg={4} md={4} sm={6} xs={12}>
+                                    <ProjectCard post={post} technologies={technologies} />
+                                  </Grid>
+                                )
+                              })}
+                              <Box display='flex' alignItems='center' justifyContent='center' >
+                                <Link href={`/project-lists/${category?.title}/${category?._id}`}>
+                                  <Button display='flex' alignItems='center' justifyContent='center' variant="outlined">See All ({category?.posts.length-6} +)</Button>
+                                </Link>
+                              </Box>
+                              </>
+                              :
+                              <>
+                              {category?.posts.map((post, key)=>{
+                                return(
+                                  <Grid key={post?._id} item lg={4} md={4} sm={6} xs={12}>
+                                    <ProjectCard post={post} technologies={technologies} />
+                                  </Grid>
+                                )
+                              })}
+                              </>
+                            }
+                          </>
                       :
-                      <>
-                       <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
-                          <Box sx={{color:'white'}}>No Posts Found </Box>
-                       </Box>
-                      </>
+                          <>
+                              <Box display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                                  <Box sx={{color:'white'}}>No Posts Found </Box>
+                              </Box>
+                          </>
                       }
                      
                     </Grid>

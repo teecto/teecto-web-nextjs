@@ -1,10 +1,6 @@
 import React from "react";
 import { Tooltip } from "@mui/material";
 import Image from "next/image";
-import figma from "../../../public/images/figma.png";
-import react from "../../../public/images/react-js.png";
-import redux from "../../../public/images/redux.png";
-import showcase from "../../../public/images/showcase-2.jpeg";
 import Link from "next/link";
 
 function ProjectCard({ post, technologies }) {
@@ -20,9 +16,6 @@ function ProjectCard({ post, technologies }) {
       }
     });
   }
-
-  console.log('technology', storeTechnology)
-
   return (
     <>
       <div className="showcase-item">

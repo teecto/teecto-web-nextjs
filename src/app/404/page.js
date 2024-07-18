@@ -8,7 +8,7 @@ export default function NotFound() {
     <>
       <div className="not-found">
           <Image src={notFound} height='' width='' alt='not-found'></Image>
-          <a href="#">
+          <a href="/">
             <div className="home-btn">
                 Back To Home
             </div>

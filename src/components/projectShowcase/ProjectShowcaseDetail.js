@@ -2,9 +2,7 @@
 import React, { useState } from "react";
 import {Grid} from "@mui/material";
 import Image from "next/image";
-import showcaseImg1 from "../../../public/images/showcase-1.jpeg";
-import showcaseImg2 from "../../../public/images/showcase-2.jpeg";
-import showcaseImg3 from "../../../public/images/showcase-3.jpeg";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
@@ -16,7 +14,6 @@ import BlockContent from "@sanity/block-content-to-react";
 
 
 function ProjectShowcaseDetail({postDeatils}) {
-  console.log('postDeatils', postDeatils)
   
   return (
     <>
