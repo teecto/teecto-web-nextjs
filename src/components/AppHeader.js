@@ -16,26 +16,21 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import Link from "next/link";
 
-const AppHeader = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+const AppHeader = ({navs}) => {
+  AOS.init();
 
   const [open, setOpen] = useState(false);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
   return (
     <>
       <div className="app-header">
         <Container>
-          {/*  */}
+          {/* data-aos="fade-down"
+            data-aos-duration="1000" */}
           <div
-            className="app-header-wrapper"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-          >
+            className="app-header-wrapper">
             <Link href="/">
               <div className="logo">
                 <Image src={logo} alt="teecto-logo"></Image>
@@ -44,49 +39,48 @@ const AppHeader = () => {
             <div className="nav-list  sm-d-none">
               <ul>
                 <li>
-                  <Link href="/portfolio">
+                  <Link href="#">
                      <ContactSupportIcon /> Protfolios
                   </Link>
                 </li>
-                <li className="dropdown-relative">
-                  <a href="#">
-                    <HandymanIcon /> Service <ArrowDropDownIcon />
-                  </a>
-                  <div className="dropdown-plate">
-                    <ul>
+                {navs && navs?.length>0 && navs.map((nav, key)=>{
+                 if(nav?.navSubItems && nav?.navSubItems.length>0){
+                    return(
+                      <li key={nav?._id} className="dropdown-relative">
+                      <Link href={`/menu/${nav?.title}/main/${nav?._id}`}>
+                        <HandymanIcon /> {nav?.title} <ArrowDropDownIcon />
+                      </Link>
+                      <div className="dropdown-plate">
+                        <ul>
+                         {nav?.navSubItems.map((subNav, key)=>{
+                          return(
+                            <li key={subNav?._id}>
+                              <Link href={`/menu/${subNav?.title}/sub/${subNav?._id}`}>
+                                <ArrowRightIcon /> {subNav?.title}
+                              </Link>
+                            </li>
+                          )
+                         })}
+                        </ul>
+                      </div>
+                    </li>
+                    )
+                 }else{
+                    return(
                       <li>
-                        <Link href="/web-development">
-                          <ArrowRightIcon /> Web Development
+                        <Link href={`/menu/${nav?.title}/main/${nav?._id}`}>
+                          <ContactSupportIcon />{nav?.title} 
                         </Link>
                       </li>
-                      <li>
-                        <Link href="/ui-ux">
-                          <ArrowRightIcon /> Ui/Ux Design
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/graphic-design">
-                          <ArrowRightIcon /> Graphic Design
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/motion-graphic">
-                          <ArrowRightIcon /> 2D/3D Motion Graphic
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/404">
-                          <ArrowRightIcon /> Bug Fix
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
+                    )
+                 }
+                })}
+               
+                {/* <li>
                   <a href="#">
                     <PublishedWithChangesIcon /> Work Process
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="#">
                     <GroupIcon /> Our Team

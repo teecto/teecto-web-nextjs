@@ -10,7 +10,13 @@ function ShowcaseCardOne({ title, detail, img }) {
           <p> {detail} </p>
         </div>
         <div className="box-img">
-          <Image src={img} alt={title}></Image>
+        <Image
+              src={img}
+              alt={title}
+              width={0}
+              height={0}
+              sizes="100vw"
+            ></Image>
         </div>
       </div>
     </>
