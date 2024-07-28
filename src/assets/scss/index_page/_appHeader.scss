@@ -6,7 +6,7 @@
   width: 100%;
 
   .app-header-wrapper{
-    width: 900px;
+    width: 880px;
     margin: 20px auto;
     height: 60px;
     background-color:  rgba(138, 152, 183, 0.387);
@@ -42,12 +42,13 @@
             letter-spacing: 1.08px;
             align-items: center;
             text-transform: uppercase;
+            line-height: 22px;
             &:hover{
               color: $whiteColor;
             }
             .MuiSvgIcon-root{
               font-size: 16px;
-              margin-right: 3px;
+              margin-right: 5px;
             }
           }
           .dropdown-plate{

@@ -3,6 +3,9 @@ import { Container } from "@mui/material";
 import sanityClient from "../../../../../client";
 import ServiceDetails from "@/components/servicePageComponent/ServiceDetails";
 import ServiceShowcase from "@/components/servicePageComponent/ServiceShowcase";
+import Image from "next/image";
+import bgShape from "../../../../../../public/images/background-shape-svg.png";
+
 
 async function getSingleNavData(params) {
   var type;
@@ -72,7 +75,7 @@ export default async function Menu({ params }) {
     <>
       <div className="subPage-body">
         <div className="background-shape">
-          <img src="images/background-shape-svg.png" alt="" />
+          <Image src={bgShape} height='' width='' alt=''></Image>
         </div>
         <Container>
           <ServiceDetails details={menuDetails[0]} />

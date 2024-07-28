@@ -3,6 +3,29 @@ import React, { useRef, useState } from "react";
 import { Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import shahin from "../../public/images/shahin.webp";
+import vue from "../../public/images/vue-js.png";
+import nuxt from "../../public/images/nuxt-js.png";
+import node from "../../public/images/node-js.png";
+import vuitify from "../../public/images/vuetify.png";
+import javascript from "../../public/images/javascript.png";
+import firebase from "../../public/images/firebase.png";
+import git from "../../public/images/git.png";
+import react from "../../public/images/react-js.png";
+import next from "../../public/images/next-js.png";
+import mui from "../../public/images/metarial-ui.png";
+import sass from "../../public/images/sass.png";
+import ant from "../../public/images/ant.png";
+import figma from "../../public/images/figma.png";
+import jquery from "../../public/images/jquery.png";
+import xd from "../../public/images/adobe-xd.png";
+import ai from "../../public/images/ai.png";
+import photoshop from "../../public/images/photoshop.png";
+import canva from "../../public/images/canva.png";
+import ae from "../../public/images/ae.png";
+import pr from "../../public/images/pr.png";
+
+
 // Import Swiper styles
 import "../assets/css/swiper.css";
 import "../assets/css/effect-cards.css";
@@ -10,6 +33,7 @@ import "../assets/css/pagination.css";
 // import required modules
 
 import { Autoplay, Pagination, EffectCards } from "swiper/modules";
+import Image from "next/image";
 
 function Team() {
   return (
@@ -38,7 +62,7 @@ function Team() {
                 <div className="team-card">
                   <div>
                     <div className="team-profile shaheen-profile">
-                      <img src='images/shahin.webp' alt="" />
+                        <Image src={shahin} height='' width='' alt=''></Image>
                     </div>
                   </div>
                   <div className="team-content">
@@ -52,31 +76,31 @@ function Team() {
                     </p>
                     <div className="showcase-intense">
                       <div className="intense-img">
-                        <img src='images/vue.png' alt="" />
+                        <Image src={vue} height='' width='' alt=''></Image>
                         <span>Vue Js </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/next.png' alt="" />
+                         <Image src={nuxt} height='' width='' alt=''></Image>
                         <span> Nuxt Js</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/node.png' alt="" />
+                         <Image src={node} height='' width='' alt=''></Image>
                         <span> Node Js</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/vuetify.png' alt="" />
+                         <Image src={vuitify} height='' width='' alt=''></Image>
                         <span> Vuetify </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/javascript.png' alt="" />
+                       <Image src={javascript} height='' width='' alt=''></Image>
                         <span> Javascript  </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/firebase.png' alt="" />
+                        <Image src={firebase} height='' width='' alt=''></Image>
                         <span> Firebase </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/git.png' alt="" />
+                        <Image src={git} height='' width='' alt=''></Image>
                         <span> Git  </span>
                       </div>
                     </div>
@@ -103,31 +127,31 @@ function Team() {
                     </p>
                     <div className="showcase-intense">
                       <div className="intense-img">
-                        <img src='images/react.png' alt="" />
+                      <Image src={react} height='' width='' alt=''></Image>
                         <span>React Js </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/next.png' alt="" />
+                      <Image src={next} height='' width='' alt=''></Image>
                         <span> Next Js</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/node.png' alt="" />
+                         <Image src={node} height='' width='' alt=''></Image>
                         <span> Node Js</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/sass.png' alt="" />
+                      <Image src={sass} height='' width='' alt=''></Image>
                         <span> SASS</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/metarial.png' alt="" />
+                      <Image src={mui} height='' width='' alt=''></Image>
                         <span> Metarial UI </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/javascript.png' alt="" />
+                      <Image src={javascript} height='' width='' alt=''></Image>
                         <span> Javascript  </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/git.png' alt="" />
+                      <Image src={git} height='' width='' alt=''></Image>
                         <span> Git  </span>
                       </div>
                     </div>
@@ -153,31 +177,31 @@ function Team() {
                     </p>
                     <div className="showcase-intense">
                       <div className="intense-img">
-                        <img src='images/react.png' alt="" />
+                      <Image src={react} height='' width='' alt=''></Image>
                         <span>React Js </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/vue.png' alt="" />
+                      <Image src={vue} height='' width='' alt=''></Image>
                         <span> Vue Js</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/sass.png' alt="" />
+                      <Image src={sass} height='' width='' alt=''></Image>
                         <span> SASS</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/jquery.png' alt="" />
+                      <Image src={jquery} height='' width='' alt=''></Image>
                         <span> Jquery</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/ant.png' alt="" />
+                      <Image src={ant} height='' width='' alt=''></Image>
                         <span> Ant Design</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/metarial.png' alt="" />
+                      <Image src={mui} height='' width='' alt=''></Image>
                         <span> Metarial UI </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/figma.png' alt="" />
+                      <Image src={figma} height='' width='' alt=''></Image>
                         <span> Figma UI/UX</span>
                       </div>
                     </div>
@@ -197,23 +221,23 @@ function Team() {
                     <p>" I'm a passionate UI and UX designer with 2 years of experience in crafting engaging digital experiences. I thrive on creating intuitive interfaces that seamlessly blend aesthetics with functionality. My journey in the design world has been driven by a constant quest for innovation and a deep commitment to delivering impactful solutions that delight users. "</p>
                     <div className="showcase-intense">
                     <div className="intense-img">
-                        <img src='images/figma.png' alt="" />
+                        <Image src={figma} height='' width='' alt=''></Image>
                         <span> Figma </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/xd.png' alt="" />
+                      <Image src={xd} height='' width='' alt=''></Image>
                         <span>Adobe XD </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/photoshop.png' alt="" />
+                      <Image src={photoshop} height='' width='' alt=''></Image>
                         <span> Adobe Photoshop</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/ai.png' alt="" />
+                      <Image src={ai} height='' width='' alt=''></Image>
                         <span> Adobe Illustrator </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/canva.png' alt="" />
+                      <Image src={canva} height='' width='' alt=''></Image>
                         <span> Canva </span>
                       </div>
                     </div>
@@ -233,19 +257,19 @@ function Team() {
                     <p>" Versatile and imaginative creative professional adept at blending graphic design prowess with video editing finesse. Eager to channel my boundless creativity and technical proficiency into a dynamic role where I can craft captivating visual narratives that elevate brands and captivate audiences "</p>
                     <div className="showcase-intense">
                       <div className="intense-img">
-                        <img src='images/photoshop.png' alt="" />
+                      <Image src={photoshop} height='' width='' alt=''></Image>
                         <span>Adobe Photoshop </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/ai.png' alt="" />
+                      <Image src={ai} height='' width='' alt=''></Image>
                         <span> Adobe Illustrator </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/ae.png' alt="" />
+                      <Image src={ae} height='' width='' alt=''></Image>
                         <span> Adobe After Effect</span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/pr.png' alt="" />
+                      <Image src={pr} height='' width='' alt=''></Image>
                         <span> Adobe Premiere Pro </span>
                       </div>
                     </div>
@@ -265,15 +289,15 @@ function Team() {
                     <p>"Hello, I'm Rahat Islam a dedicated learner and an enthusiastic graphic designer with two year of experience. My journey in graphic design has perfected my eye for aesthetics and enhanced my design skills. I am dedicated to improving my abilities and bringing creative ideas to my work."</p>
                     <div className="showcase-intense">
                       <div className="intense-img">
-                        <img src='images/photoshop.png' alt="" />
+                        <Image src={photoshop} height='' width='' alt=''></Image>
                         <span>Adobe Photoshop </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/ai.png' alt="" />
+                      <Image src={ai} height='' width='' alt=''></Image>
                         <span> Adobe Illustrator </span>
                       </div>
                       <div className="intense-img">
-                        <img src='images/adobe-xd.png' alt="" />
+                        <Image src={xd} height='' width='' alt=''></Image>
                         <span>Adobe XD </span>
                       </div>
                     </div>

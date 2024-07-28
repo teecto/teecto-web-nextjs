@@ -14,9 +14,11 @@
     position: absolute; 
     top: 50px;
     left: 20px;
+    max-width: 600px;
+    max-height: 600px;
     img{
-      max-width: 600px;
-      max-height: 600px;
+      height: 100%;
+      width: 100%;
       object-fit: contain;
       opacity: .3;
     }
@@ -107,21 +109,46 @@
         // position: absolute;
         // bottom: -10px;
         // right: -10px;
+        width: 100%;
+        max-height: 230px;
         img{
           width: 100%;
-          max-height: 230px;
+          height: 100%;
           object-fit: contain;
         } 
       }
       .box-img-2{
         border-radius: 12px;
         overflow: hidden;
+        max-height: 300px;
+        width: 100%;
         img{
           width: 100%;
-          max-height: 300px; 
+          height: 100%; 
           object-fit: contain;
           border-radius: 12px;
         }
       }
+    }
+}
+
+.service-icon-content {
+    .skills-list{
+        .skill-card{
+                  height: 60px;
+                  width: 60px;
+            .card-icon{
+                  height: 100%;
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                img{
+                  height: auto;
+                  width: auto;
+                  object-fit: contain;
+                }
+            }
+        }
     }
 }
