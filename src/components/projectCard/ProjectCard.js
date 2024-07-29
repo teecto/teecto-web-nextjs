@@ -36,7 +36,7 @@ function ProjectCard({ post, technologies }) {
           )}
           <div className="overly">
           <Link href={`/details/${post.slug.current}`}><button>Details</button></Link>
-             <a href={post?.link} target="_blank"><button>View Demo</button></a>
+            {post?.link && <a href={post?.link} target="_blank"><button>View Demo</button></a>}
           </div>
         </div>
         <div className="showcase-content">

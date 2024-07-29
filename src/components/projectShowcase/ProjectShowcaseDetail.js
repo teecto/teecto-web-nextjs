@@ -14,7 +14,7 @@ import BlockContent from "@sanity/block-content-to-react";
 
 
 function ProjectShowcaseDetail({postDeatils}) {
-  
+  console.log('postDeatils', postDeatils)
   return (
     <>
       <div className="dialog-view-conetnt">
@@ -53,7 +53,7 @@ function ProjectShowcaseDetail({postDeatils}) {
                     {postDeatils?.type && <div className="sub-title">{postDeatils?.type}</div>}
                     
                     <BlockContent
-                        blocks={postDeatils.body}
+                        blocks={postDeatils?.body}
                         projectId="rnh21rzn"
                         dataset="production"
                     />
