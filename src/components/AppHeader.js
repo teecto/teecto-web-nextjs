@@ -27,12 +27,10 @@ const AppHeader = ({navs}) => {
     <>
       <div className="app-header">
         <Container>
-          {/*  */}
+          {/* data-aos="fade-down"
+            data-aos-duration="1000" */}
           <div
-            className="app-header-wrapper"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-          >
+            className="app-header-wrapper">
             <Link href="/">
               <div className="logo">
                 <Image src={logo} alt="teecto-logo"></Image>
@@ -78,11 +76,11 @@ const AppHeader = ({navs}) => {
                  }
                 })}
                
-                <li>
+                {/* <li>
                   <a href="#">
                     <PublishedWithChangesIcon /> Work Process
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="#">
                     <GroupIcon /> Our Team

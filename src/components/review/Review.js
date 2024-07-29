@@ -6,7 +6,7 @@ import rating from "../../../public/images/rating.png";
 import ReviewCard from "./ReviewCard";
 
 const reviewContent = [
-  { title: "Years Of Experience", number: "6+", img: reputation },
+  { title: "Years Of Experience", number: "7+", img: reputation },
   { title: "Completed Projects ", number: "130+", img: check },
   { title: "Happy Clients", number: "65+", img: rating }
 ];
