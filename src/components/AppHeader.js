@@ -47,9 +47,9 @@ const AppHeader = ({navs}) => {
                  if(nav?.navSubItems && nav?.navSubItems.length>0){
                     return(
                       <li key={nav?._id} className="dropdown-relative">
-                      <Link href={`/menu/${nav?.title}/main/${nav?._id}`}>
+                      <a>
                         <HandymanIcon /> {nav?.title} <ArrowDropDownIcon />
-                      </Link>
+                      </a>
                       <div className="dropdown-plate">
                         <ul>
                          {nav?.navSubItems.map((subNav, key)=>{
