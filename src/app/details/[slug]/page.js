@@ -33,6 +33,7 @@ export default async function ShowcaseDetail({params}){
     publishedAt
   }`;
   const postDeatils = await sanityClient.fetch(query, { slug: params.slug });
+  console.log('postDeatils', postDeatils)
   return (
     <>
       <div className="subPage-body">

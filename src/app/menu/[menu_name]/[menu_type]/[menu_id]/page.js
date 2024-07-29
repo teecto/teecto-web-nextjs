@@ -83,7 +83,7 @@ export default async function Menu({ params }) {
 
         <div className="service-showcase">
           <Container>
-            <ServiceShowcase menuPosts={menuPosts} />
+            <ServiceShowcase menuPosts={menuPosts} menuDetails={menuDetails[0]} />
           </Container>
         </div>
         <Contact />
