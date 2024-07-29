@@ -2,7 +2,8 @@ import Contact from "@/components/Contact";
 import { Container } from "@mui/material";
 import ProjectShowcaseDetail from "@/components/projectShowcase/ProjectShowcaseDetail";
 import sanityClient from "../../../client";
-
+import Image from "next/image";
+import bgShape from "../../../../public/images/background-shape-svg.png";
 
 export default async function ShowcaseDetail({params}){
   const query = `*[_type == "post" && slug.current == $slug][0] {
@@ -36,7 +37,7 @@ export default async function ShowcaseDetail({params}){
     <>
       <div className="subPage-body">
         <div className="background-shape">
-          <img src="images/background-shape-svg.png" alt="" />
+          <Image src={bgShape} height='' width='' alt=''></Image>
         </div>
         <Container>
           <ProjectShowcaseDetail postDeatils={postDeatils}/>

@@ -16,15 +16,13 @@ function ShowcaseCardTwo({ title, detail, img }) {
           </Grid>
           <Grid item xs={7}>
             <div className="box-img-2">
-              <div className="intense-img">
-                <Image
+               <Image
                   src={img}
                   alt={title}
                   width={0}
                   height={0}
                   sizes="100vw"
                 ></Image>
-              </div>
             </div>
           </Grid>
         </Grid>
